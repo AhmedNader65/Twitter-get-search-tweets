@@ -61,14 +61,13 @@ public class MainActivity extends AppCompatActivity {
             TwitterFactory tf = new TwitterFactory(cb.build());
             Twitter twitter = tf.getInstance();
             int page = 1;
-            while(true){
             try {
                 List<twitter4j.Status> statuses;
                 String user;
                 Log.e("user",param[0]);
                 Log.e("word",param[1]);
                 user = param[0];
-                statuses = twitter.getUserTimeline(user,new Paging(page++, 200));
+                statuses = twitter.getUserTimeline(user,new Paging(1,200));
                 Log.i("Status Count", statuses.size() + " Feeds");
                 for (int i = 0; i < statuses.size(); i++) {
                     twitter4j.Status status = statuses.get(i);
@@ -77,15 +76,12 @@ public class MainActivity extends AppCompatActivity {
                         tweets.add(status.getText());
                     }
                 }
-                if(statuses.size() == 0){
-                    break;
-                }
+                
             } catch (TwitterException te) {
                 te.printStackTrace();
-            }}
+            }
             return tweets;
         }
-
 
 
         @Override
