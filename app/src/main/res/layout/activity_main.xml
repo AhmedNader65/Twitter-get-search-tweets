@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#1DA1F2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context="mrerror.myapplication.MainActivity">
+   <LinearLayout
+
+       android:weightSum="5"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:textColor="#fff"
+           android:layout_weight="1.4"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="User Name"
+           />
+       <EditText
+           android:paddingLeft="10dp"
+
+           android:paddingRight="10dp"
+           android:id="@+id/user"
+           android:layout_weight="3.6"
+           android:layout_width="0dp"
+           android:background="@drawable/round"
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="14dp"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#fff"
+            android:layout_weight="1.4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Type word"
+            />
+        <EditText
+            android:paddingLeft="10dp"
+
+            android:paddingRight="10dp"
+            android:id="@+id/word"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:background="@drawable/round"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:onClick="search"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            />
+    </LinearLayout>
+    <TextView
+        android:textColor="#fff"
+        android:id="@+id/num"
+        android:layout_margin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"/>
+    <ListView
+        android:background="#fff"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>
