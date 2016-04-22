@@ -51,13 +51,13 @@ public class MainActivity extends AppCompatActivity {
 
             ConfigurationBuilder cb = new ConfigurationBuilder();
             cb.setDebugEnabled(true)
-                    .setOAuthConsumerKey("RAu52K2nIQcABjn1FuHCBtvSO")
+                    .setOAuthConsumerKey("************")
                     .setOAuthConsumerSecret(
-                            "fXvTa17hJD6mYx0tvfR0pmQYcVVms3QMKMOP02HSaOswGdOoqD")
+                            "***************")
                     .setOAuthAccessToken(
-                            "296792200-VwyaIY7qpv9FvO60ecWOJJADI794YLIdkQ2b3AQQ")
+                            "*************")
                     .setOAuthAccessTokenSecret(
-                            "vmw0IzBSxq29g7VfbeIiaX5k9L0CYISM2QmCSvuff8TDO");
+                            "*******************");
             TwitterFactory tf = new TwitterFactory(cb.build());
             Twitter twitter = tf.getInstance();
             int page = 1;
